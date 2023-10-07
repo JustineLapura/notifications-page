@@ -112,7 +112,7 @@ export default function Home() {
 
   useEffect(() => {
     setNotifs(notifications);
-  }, [notifs]);
+  }, []);
 
   const unreadNotifs = notifs.filter((notif) => notif.read === false);
 
