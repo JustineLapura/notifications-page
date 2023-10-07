@@ -159,14 +159,14 @@ export default function Home() {
                     : "flex w-full hover:bg-gray-100 rounded-lg p-4 cursor-pointer"
                 }
               >
-                <div className="w-[15%] sm:w-[65px] lg:w-16 lg:h-9 rounded-full ps-1 pe-4">
+                <div className="w-[20%] sm:w-[65px] lg:w-16 lg:h-9 rounded-full ps-1 pe-4">
                   <Image
                     src={notification.profileImg}
                     alt="Mark Webber"
                     className="w-full"
                   />
                 </div>
-                <div className="flex justify-between gap-2 w-[85%] lg:7/10 text-sm">
+                <div className="flex justify-between gap-2 w-[80%] lg:7/10 text-sm">
                   <div className="">
                     <p className="items-center text-gray-700">
                       <span className="font-bold text-gray-900">
