@@ -131,7 +131,7 @@ export default function Home() {
 
   return (
     <main className="flex w-full h-full justify-center bg-gray-100 md:py-8">
-      <div className="bg-white w-full max-w-[800px] min-h-screen mx-auto md:rounded p-4">
+      <div className="bg-white w-full max-w-[650px] min-h-screen mx-auto md:rounded-xl p-4">
         {/* Notificatoion Header  */}
         <div className="flex justify-between items-center">
           <h1 className="text-xl font-black text-gray-900">
@@ -147,7 +147,7 @@ export default function Home() {
             Mark all as read
           </p>
         </div>
-        <div className="w-full h-full py-5 space-y-4">
+        <div className="w-full h-full py-5 space-y-4 lg:space-y-2">
           {/* notification cards */}
           {notifs &&
             notifs.map((notification) => (
@@ -155,52 +155,56 @@ export default function Home() {
                 key={notification.id}
                 className={
                   notification.read === false
-                    ? "flex w-full bg-gray-50 rounded-lg p-4 cursor-pointer"
-                    : "flex w-full rounded-lg p-4 cursor-pointer"
+                    ? "flex w-full bg-gray-100 hover:bg-gray-200 rounded-lg p-4 cursor-pointer"
+                    : "flex w-full hover:bg-gray-100 rounded-lg p-4 cursor-pointer"
                 }
               >
-                <div className="w-1/6 rounded-full ps-1 pe-4">
+                <div className="w-[15%] sm:w-[65px] lg:w-16 lg:h-9 rounded-full ps-1 pe-4">
                   <Image
                     src={notification.profileImg}
                     alt="Mark Webber"
                     className="w-full"
                   />
                 </div>
-                <div className="w-5/6 text-sm">
-                  <p className="items-center text-gray-700">
-                    <span className="font-bold text-gray-900">
-                      {notification.name}
-                    </span>
-                    {" " + notification.notif + " "}
-                    {/* event notif  */}
-                    {notification.event.post && (
+                <div className="flex justify-between gap-2 w-[85%] lg:7/10 text-sm">
+                  <div className="">
+                    <p className="items-center text-gray-700">
                       <span className="font-bold text-gray-900">
-                        {notification.event.post}
+                        {notification.name}
                       </span>
+                      {" " + notification.notif + " "}
+                      {/* event notif  */}
+                      {notification.event.post && (
+                        <span className="font-bold text-gray-900">
+                          {notification.event.post}
+                        </span>
+                      )}
+                      {notification.event.group && (
+                        <span className="font-bold text-gray-900">
+                          {notification.event.group}
+                        </span>
+                      )}
+                      {notification.read === false && (
+                        <div className="w-2 h-2 bg-red-500 rounded-full inline-block ms-1 my-auto" />
+                      )}
+                    </p>
+                    <p className="text-gray-500">{notification.timeNotified}</p>
+                    {notification.event.message && (
+                      <div className="border p-3 rounded text-gray-700 mt-2">
+                        {notification.event.message}
+                      </div>
                     )}
-                    {notification.event.group && (
-                      <span className="font-bold text-gray-900">
-                        {notification.event.group}
-                      </span>
-                    )}
-                    { notification.read === false && <div className="w-2 h-2 bg-red-500 rounded-full inline-block ms-1 my-auto" />}
-                  </p>
-                  <p className="text-gray-500">{notification.timeNotified}</p>
-                  {notification.event.message && (
-                    <div className="border p-3 rounded text-gray-700 mt-2">
-                      {notification.event.message}
+                  </div>
+                  {notification.event.photo && (
+                    <div className="w-16 lg:w-16 lg:h-9 rounded-full ps-1 pe-4">
+                      <Image
+                        src={notification.event.photo}
+                        alt="Mark Webber"
+                        className="w-full"
+                      />
                     </div>
                   )}
                 </div>
-                {notification.event.photo && (
-                  <div className="w-1/6 rounded-full ps-1 pe-4">
-                  <Image
-                    src={notification.event.photo}
-                    alt="Mark Webber"
-                    className="w-full"
-                  />
-                </div>
-                )}
               </div>
             ))}
         </div>
