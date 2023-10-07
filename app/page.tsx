@@ -166,7 +166,7 @@ export default function Home() {
                     className="w-full"
                   />
                 </div>
-                <div className="flex justify-between w-[80%] lg:7/10 text-sm">
+                <div className="flex justify-between w-[80%] lg:w-full text-sm">
                   <div className="">
                     <p className="items-center text-gray-700">
                       <span className="font-bold text-gray-900">
@@ -196,7 +196,7 @@ export default function Home() {
                     )}
                   </div>
                   {notification.event.photo && (
-                    <div className="w-[20%] sm:w-[65px] lg:w-16 lg:h-9 rounded-full">
+                    <div className="w-[20%] sm:w-[65px] lg:w-12 lg:h-9 rounded-full">
                       <Image
                         src={notification.event.photo}
                         alt="Mark Webber"
