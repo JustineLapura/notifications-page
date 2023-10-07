@@ -175,12 +175,12 @@ export default function Home() {
                       {" " + notification.notif + " "}
                       {/* event notif  */}
                       {notification.event.post && (
-                        <span className="font-bold text-gray-900">
+                        <span className="font-bold text-gray-600">
                           {notification.event.post}
                         </span>
                       )}
                       {notification.event.group && (
-                        <span className="font-bold text-gray-900">
+                        <span className="font-bold text-blue-900">
                           {notification.event.group}
                         </span>
                       )}
@@ -190,13 +190,13 @@ export default function Home() {
                     </p>
                     <p className="text-gray-500">{notification.timeNotified}</p>
                     {notification.event.message && (
-                      <div className="border p-3 rounded text-gray-700 mt-2">
+                      <div className="border p-3 rounded text-gray-600 mt-2">
                         {notification.event.message}
                       </div>
                     )}
                   </div>
                   {notification.event.photo && (
-                    <div className="w-[20%] sm:w-[65px] lg:w-16 lg:h-9 rounded-full ps-1 pe-4">
+                    <div className="w-[20%] sm:w-[65px] lg:w-16 lg:h-9 rounded-full">
                       <Image
                         src={notification.event.photo}
                         alt="Mark Webber"
