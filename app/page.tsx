@@ -51,6 +51,7 @@ export default function Home() {
           {notifs &&
             notifs.map((notification) => (
               <NotificationCards
+                key={notification.id}
                 notification={notification}
                 handleRead={(e) => handleRead(notification.id, e)}
               />
