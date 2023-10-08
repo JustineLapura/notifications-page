@@ -4,12 +4,14 @@ import { Notification } from "@/app/types";
 
 interface NotificationCardsProps {
     notification: Notification;
+    handleRead: (event: React.MouseEvent<HTMLParagraphElement, MouseEvent>) => void;
   }
 
-const NotificationCards = ({notification} : NotificationCardsProps) => {
+const NotificationCards = ({notification, handleRead} : NotificationCardsProps) => {
   return (
           <div
             key={notification.id}
+            onClick={handleRead}
             className={
               notification.read === false
                 ? "flex w-full bg-gray-100 hover:bg-gray-200 rounded-lg p-4 cursor-pointer"
