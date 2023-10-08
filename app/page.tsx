@@ -7,7 +7,7 @@ import rizkyHasanuddin from "/public/images/avatar-rizky-hasanuddin.webp";
 import kimberlySmith from "/public/images/avatar-kimberly-smith.webp";
 import nathanPeterson from "/public/images/avatar-nathan-peterson.webp";
 import annaKim from "/public/images/avatar-anna-kim.webp";
-import imageChess from "/public/images/image-chess.webp";
+import profile from "/public/images/profile.jpg";
 import { StaticImageData } from "next/image";
 import { useEffect, useState } from "react";
 
@@ -55,7 +55,7 @@ const notifications = [
     profileImg: jacobThompson,
     timeNotified: "1day ago",
     event: {
-      group: "Chess Club",
+      group: "Table Tennis Club",
     },
     notif: "has joined your group",
     read: false,
@@ -67,7 +67,7 @@ const notifications = [
     timeNotified: "5days ago",
     event: {
       message:
-        "Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having alots of fun and improving my game.",
+        "Hello, thanks for setting up the Table Tennis Club. I've been a member for a few weeks now and I'm already having alots of fun and improving my game.",
     },
     notif: "sent you a private message",
     read: true,
@@ -78,7 +78,7 @@ const notifications = [
     profileImg: kimberlySmith,
     timeNotified: "1week ago",
     event: {
-      photo: imageChess,
+      photo: profile,
     },
     notif: "commented on your picture",
     read: true,
@@ -100,7 +100,7 @@ const notifications = [
     profileImg: annaKim,
     timeNotified: "2weeks ago",
     event: {
-      group: "Chess Club",
+      group: "Table Tennis Club",
     },
     notif: "left the group",
     read: true,
@@ -196,11 +196,11 @@ export default function Home() {
                     )}
                   </div>
                   {notification.event.photo && (
-                    <div className="w-[20%] sm:w-[65px] lg:w-12 lg:h-9 rounded-full">
+                    <div className="w-[20%] sm:w-[65px] lg:w-12 lg:h-9 ">
                       <Image
                         src={notification.event.photo}
                         alt="Mark Webber"
-                        className="w-full"
+                        className="w-full rounded-lg ms-1"
                       />
                     </div>
                   )}
