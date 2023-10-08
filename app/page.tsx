@@ -5,6 +5,7 @@ import { Notification } from "./types";
 import NotificationCards from "@/components/NotificationCards";
 import NotificationHeader from "@/components/NotificationHeader";
 
+
 export default function Home() {
   const [notifs, setNotifs] = useState<Notification[]>([]);
 
@@ -49,9 +50,10 @@ export default function Home() {
         <div className="w-full h-full py-5 space-y-4 lg:space-y-2">
           {/* notification cards */}
           {notifs &&
-            notifs.map((notification) => (
+            notifs.map((notification, index) => (
               <NotificationCards
                 key={notification.id}
+                index={index}
                 notification={notification}
                 handleRead={(e) => handleRead(notification.id, e)}
               />

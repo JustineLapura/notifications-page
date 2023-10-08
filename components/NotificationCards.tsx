@@ -1,8 +1,10 @@
 import Image from "next/image";
 import React from "react";
 import { Notification } from "@/app/types";
+import { motion } from "framer-motion";
 
 interface NotificationCardsProps {
+  index: number;
   notification: Notification;
   handleRead: (
     event: React.MouseEvent<HTMLParagraphElement, MouseEvent>
@@ -10,18 +12,23 @@ interface NotificationCardsProps {
 }
 
 const NotificationCards = ({
+  index,
   notification,
   handleRead,
 }: NotificationCardsProps) => {
   return (
-    <div
+    <motion.div
       onClick={handleRead}
       className={
         notification.read === false
           ? "flex w-full bg-gray-100 hover:bg-gray-200 rounded-lg p-4 cursor-pointer"
           : "flex w-full hover:bg-gray-100 rounded-lg p-4 cursor-pointer"
       }
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: index + 0.5 }}
     >
+      
       <div className="w-[20%] sm:w-[65px] lg:w-16 lg:h-9 rounded-full ps-1 pe-4">
         <Image
           src={notification.profileImg}
@@ -66,7 +73,7 @@ const NotificationCards = ({
           </div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
