@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import clickMeGif from "/public/images/giphy.gif"
 
 interface NotificationHeaderProps {
   unreadCount: number;
@@ -24,12 +26,13 @@ const NotificationHeader = ({
           {unreadCount}
         </span>
       </h1>
-      <p
-        onClick={onMarkAllAsRead}
-        className="text-gray-500 cursor-pointer hover:font-semibold"
-      >
-        Mark all as read
-      </p>
+        <p
+          onClick={onMarkAllAsRead}
+          className={`text-gray-500 cursor-pointer hover:font-semibold ${unreadCount === 0 ? "" : "animate-bounce"}`}
+        >
+          Mark all as read
+        </p>
+        {/* <Image src={clickMeGif} alt="click gif" className="w-32 absolute bottom-0 right-5"/> */}
     </motion.div>
   );
 };
