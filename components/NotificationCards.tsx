@@ -21,19 +21,19 @@ const NotificationCards = ({
       onClick={handleRead}
       className={
         notification.read === false
-          ? "flex w-full bg-gray-100 hover:bg-gray-200 rounded-lg p-4 cursor-pointer"
-          : "flex w-full hover:bg-gray-100 rounded-lg p-4 cursor-pointer"
+          ? "flex w-full bg-gray-100 hover:bg-gray-200 rounded-lg p-4 cursor-pointer gap-4"
+          : "flex w-full hover:bg-gray-100 rounded-lg p-4 cursor-pointer gap-4"
       }
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: index + 0.5 }}
     >
       
-      <div className="w-[20%] sm:w-[65px] lg:w-16 lg:h-9 rounded-full ps-1 pe-4">
+      <div className="w-12 h-12 sm:w-[65px] sm:h-[65px] lg:w-16 lg:h-14 rounded-full  overflow-hidden">
         <Image
           src={notification.profileImg}
           alt="Mark Webber"
-          className="w-full"
+          className="w-full h-full"
         />
       </div>
       <div className="flex justify-between w-[80%] lg:w-full text-sm">

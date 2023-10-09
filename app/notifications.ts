@@ -1,17 +1,17 @@
-import markWebber from "/public/images/avatar-mark-webber.webp";
-import angelaGray from "/public/images/avatar-angela-gray.webp";
-import jacobThompson from "/public/images/avatar-jacob-thompson.webp";
-import rizkyHasanuddin from "/public/images/avatar-rizky-hasanuddin.webp";
-import kimberlySmith from "/public/images/avatar-kimberly-smith.webp";
-import nathanPeterson from "/public/images/avatar-nathan-peterson.webp";
-import annaKim from "/public/images/avatar-anna-kim.webp";
+import raymondImg from "/public/images/raymond.jpg";
+import ivanaImg from "/public/images/ivana.webp";
+import simonImg from "/public/images/simon.jpg";
+import maLong from "/public/images/maLong.jpeg";
+import francineImg from "/public/images/francine.jpeg";
+import jethroImg from "/public/images/jethro.jpg";
+import seniorAgilaImg from "/public/images/senior-agila.webp";
 import profile from "/public/images/profile.jpg";
 
 export const notifications = [
     {
       id: 1,
-      name: "Mark Webber",
-      profileImg: markWebber,
+      name: "Raymond Verzosa",
+      profileImg: raymondImg,
       timeNotified: "1m ago",
       event: {
         post: "My first tournament today!",
@@ -21,8 +21,8 @@ export const notifications = [
     },
     {
       id: 2,
-      name: "Angela Gray",
-      profileImg: angelaGray,
+      name: "Ivana Alawi",
+      profileImg: ivanaImg,
       timeNotified: "5m ago",
       event: {},
       notif: "followed you",
@@ -30,8 +30,8 @@ export const notifications = [
     },
     {
       id: 3,
-      name: "Jacob Thompson",
-      profileImg: jacobThompson,
+      name: "Simon Siachua",
+      profileImg: simonImg,
       timeNotified: "1day ago",
       event: {
         group: "Table Tennis Club",
@@ -41,8 +41,8 @@ export const notifications = [
     },
     {
       id: 4,
-      name: "Rizky Hasanuddin",
-      profileImg: rizkyHasanuddin,
+      name: "Ma Long",
+      profileImg: maLong,
       timeNotified: "5days ago",
       event: {
         message:
@@ -53,8 +53,8 @@ export const notifications = [
     },
     {
       id: 5,
-      name: "Kimberly Smith",
-      profileImg: kimberlySmith,
+      name: "Francine Diaz",
+      profileImg: francineImg,
       timeNotified: "1week ago",
       event: {
         photo: profile,
@@ -64,8 +64,8 @@ export const notifications = [
     },
     {
       id: 6,
-      name: "Nathan Peterson",
-      profileImg: nathanPeterson,
+      name: "Jethroo Lapura",
+      profileImg: jethroImg,
       timeNotified: "2weeks ago",
       event: {
         post: "5 end-game strategies to increase your win rate",
@@ -75,8 +75,8 @@ export const notifications = [
     },
     {
       id: 7,
-      name: "Anna Kim",
-      profileImg: annaKim,
+      name: "Senior Agila",
+      profileImg: seniorAgilaImg,
       timeNotified: "2weeks ago",
       event: {
         group: "Table Tennis Club",
