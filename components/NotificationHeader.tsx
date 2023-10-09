@@ -16,7 +16,7 @@ const NotificationHeader = ({
 }: NotificationHeaderProps) => {
   return (
     <motion.div
-      className="flex justify-between items-center"
+      className="flex justify-between items-center gap-6"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
     >
@@ -28,9 +28,9 @@ const NotificationHeader = ({
       </h1>
         <p
           onClick={onMarkAllAsRead}
-          className={`text-gray-500 ${unreadCount === 0 ? "text-green-600" : "animate-bounce hover:font-semibold cursor-pointer"}`}
+          className={`text-gray-500 ${unreadCount === 0 ? "text-green-600 me-3" : "animate-bounce hover:font-semibold cursor-pointer"}`}
         >
-         {unreadCount === 0 ? "Youv'e read all notifications!" : "Mark all as read"}
+         {unreadCount === 0 ? "Well Done!" : "Mark all as read"}
         </p>
         {/* <Image src={clickMeGif} alt="click gif" className="w-32 absolute bottom-0 right-5"/> */}
     </motion.div>
