@@ -28,9 +28,9 @@ const NotificationHeader = ({
       </h1>
         <p
           onClick={onMarkAllAsRead}
-          className={`text-gray-500 cursor-pointer hover:font-semibold ${unreadCount === 0 ? "" : "animate-bounce"}`}
+          className={`text-gray-500 ${unreadCount === 0 ? "text-green-600" : "animate-bounce hover:font-semibold cursor-pointer"}`}
         >
-          Mark all as read
+         {unreadCount === 0 ? "Youv'e read all notifications!" : "Mark all as read"}
         </p>
         {/* <Image src={clickMeGif} alt="click gif" className="w-32 absolute bottom-0 right-5"/> */}
     </motion.div>
